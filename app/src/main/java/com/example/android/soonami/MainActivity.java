@@ -161,7 +161,7 @@ public class MainActivity extends AppCompatActivity {
                 urlConnection.setRequestMethod("GET");                      //Specifies Method to connect
                 urlConnection.setReadTimeout(10000 /* milliseconds */);
                 urlConnection.setConnectTimeout(15000 /* milliseconds */);
-                                                   //Connect with url
+                urlConnection.connect();                                    //Connect with url
                 inputStream = urlConnection.getInputStream();
                 jsonResponse = readFromStream(inputStream);
             } catch (IOException e) {
